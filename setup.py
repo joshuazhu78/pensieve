@@ -4,7 +4,7 @@ start_dir = os.getcwd()
 
 # mahimahi
 os.system("sudo sysctl -w net.ipv4.ip_forward=1")
-os.system("sudo add-apt-repository -y ppa:keithw/mahimahi")
+# os.system("sudo add-apt-repository -y ppa:keithw/mahimahi")
 os.system("sudo apt-get -y update")
 os.system("sudo apt-get -y install mahimahi")
 
@@ -29,10 +29,12 @@ os.system("sudo apt-get -f -y install")
 
 # tensorflow
 os.system("sudo apt-get -y install python-pip python-dev")
-os.system("sudo pip install tensorflow")
+# os.system("sudo pip install tensorflow")
+os.system("pip install --ignore-installed --upgrade https://files.pythonhosted.org/packages/8a/73/74c610decd5e0a1fd7f441a32e3561d21c28ced98fd6d3d9d5c70dbf92ce/tensorflow-1.1.0-cp27-cp27mu-manylinux1_x86_64.whl")
 
 # tflearn
-os.system("sudo pip install tflearn")
+# os.system("sudo pip install tflearn")
+os.system("sudo pip install tflearn==0.3.1")
 os.system("sudo apt-get -y install python-h5py")
 os.system("sudo apt-get -y install python-scipy")
 
